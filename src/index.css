@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .after-underline::after {
+      content: "";
+      display: block;
+      width: 2rem;
+      padding-top: 3px;
+      border-bottom: 0.375rem solid;
+      border-bottom-color: #007d79;
+      border-bottom-color: var(--brand-03);
+    }
+}

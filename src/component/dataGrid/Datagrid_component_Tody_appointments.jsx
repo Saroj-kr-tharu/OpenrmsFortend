@@ -5,10 +5,7 @@ import { process, orderBy } from "@progress/kendo-data-query";
 import today_appointment_data from "../../local_data/today_appoinemnt";
 
 const CustomHeaderCell = (props) => (
-  <th
-    className="text-gray-800 text-xl text-center font-bold capitalize"
-    {...props}
-  >
+  <th className="text-gray-800  text-center font-medium capitalize" {...props}>
     {props.title}
     {props.sortDirection && (
       <span
@@ -24,8 +21,8 @@ const column_text = [
   {
     field: "patientName",
     title: "Patient Name",
-    minWidth: 50,
-    width: 250,
+    minWidth: 150,
+    
     className: "text-blue-700 font-bold",
     headerCell: CustomHeaderCell,
   },
@@ -33,30 +30,30 @@ const column_text = [
     field: "identifier",
     title: "Identifier",
     minWidth: 50,
-    width: 110,
+    
     className: "",
     headerCell: CustomHeaderCell,
   },
   {
     field: "location",
     title: "Location",
-    minWidth: 50,
-    width: 200,
+    minWidth: 100,
+    
     className: " ",
     headerCell: CustomHeaderCell,
   },
   {
     field: "serviceType",
     title: "Service Type",
-    minWidth: 50,
-    width: 250,
+    minWidth: 150,
+    
     headerCell: CustomHeaderCell,
   },
   {
     field: "status",
     title: "Status",
-    minWidth: 50,
-    width: 200,
+    minWidth: 120,
+    
     headerCell: CustomHeaderCell,
   },
 ];
@@ -136,7 +133,7 @@ const btn = (data) => {
     <button
       className="inline-flex items-center   w-32
 border-2 border-[#007d79] text-[#007d79]
-px-2 py-2 font-semibold
+px-2 py-1 font-semibold
 hover:bg-[#007d79] hover:text-white"
     >
       <span>{data}</span>
@@ -221,8 +218,6 @@ function DatagridComponent_appointment() {
               value={searchQuery}
               onChange={handleSearch}
             />
-
-           
           </div>
 
           {/* Download Button */}
@@ -246,6 +241,7 @@ function DatagridComponent_appointment() {
 
       {/* Search section end */}
 
+      {/* Grid start here */}
       <Grid
         data={result.data.map((item) => ({
           ...item,
@@ -270,10 +266,11 @@ function DatagridComponent_appointment() {
             width={item.width}
             cell={item.field === "status" ? BooleanCell : ""}
             headerCell={item.headerCell}
-            className={"text-gray-700 font-extrabold text-lg " + item.className}
+            className={"text-gray-700 font- " + item.className}
           />
         ))}
       </Grid>
+      {/* Grid end here */}
     </>
   );
 }

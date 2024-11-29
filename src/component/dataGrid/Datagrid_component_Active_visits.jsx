@@ -6,7 +6,7 @@ import Patient_info from "../../local_data/patient_Visit";
 
 const CustomHeaderCell = (props) => (
   <th
-    className="text-gray-800 text-xl text-center font-bold capitalize"
+    className="text-gray-800  text-center font-medium capitalize"
     {...props}
   >
     {props.title}
@@ -18,7 +18,7 @@ const column_text = [
     field: "visitTime",
     title: "Visit Time",
     minWidth: 50,
-    width: 300,
+    width: 250,
     className: " ",
     headerCell: CustomHeaderCell,
   },
@@ -26,7 +26,7 @@ const column_text = [
     field: "idNumber",
     title: "ID Number",
     minWidth: 50,
-    width: 140,
+    width: 120,
     className: " ",
     headerCell: CustomHeaderCell,
   },
@@ -34,7 +34,7 @@ const column_text = [
     field: "fullName",
     title: "Name",
     minWidth: 50,
-    width: 300,
+    width: 250,
     className: "text-blue-700 font-bold  ",
     headerCell: CustomHeaderCell,
   },
@@ -42,7 +42,7 @@ const column_text = [
     field: "gender",
     title: "Gender",
     minWidth: 50,
-    width: 100,
+    width: 90,
     className: " ",
     headerCell: CustomHeaderCell,
   },
@@ -50,7 +50,7 @@ const column_text = [
     field: "age",
     title: "Age",
     minWidth: 50,
-    width: 100,
+    width: 70,
     className: " ",
     headerCell: CustomHeaderCell,
   },
@@ -58,7 +58,7 @@ const column_text = [
     field: "visitType",
     title: "Visit Type",
     minWidth: 50,
-    width: 290,
+    width: 120,
     className: " ",
     headerCell: CustomHeaderCell,
   },
@@ -175,7 +175,7 @@ function DatagridComponent() {
             title={item.title}
             width={item.width}
             headerCell={item.headerCell}
-            className={"text-gray-700 font-extrabold text-lg " + item.className}
+            className={"text-gray-700 font-extrabold text-sm " + item.className}
           />
         ))}
       </Grid>

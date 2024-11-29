@@ -20,26 +20,27 @@ const {
   LoginComponent,
   PatientListComponent,
   LaboratoryComponent,
-  AppointmentComponent
+  AppointmentComponent,
 } = Components;
-
-
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
-     <Route index element={<Navigate to="/home" replace />} />
-
-      <Route path="home" element={<HomeComponent />} />
-
-      <Route path="/home/ward" element={<WardComponent />} />
-      <Route path="/home/paitentlist" element={<PatientListComponent />} />
-
-      <Route path="/home/servicequeue" element={<ServiceQueueComponent />} />
-      <Route path="/home/laboratory" element={<LaboratoryComponent />} />
-      <Route path="/home/appointment" element={<AppointmentComponent />} />
+    <Route>
       <Route path="/Login" element={<LoginComponent />} />
-     
+
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Navigate to="/home" replace />} />
+
+        <Route path="home" element={<HomeComponent />} />
+
+        <Route path="/home/ward" element={<WardComponent />} />
+        <Route path="/home/paitentlist" element={<PatientListComponent />} />
+
+        <Route path="/home/servicequeue" element={<ServiceQueueComponent />} />
+        <Route path="/home/laboratory" element={<LaboratoryComponent />} />
+        <Route path="/home/appointment" element={<AppointmentComponent />} />
+      </Route>
+      
     </Route>
   )
 );

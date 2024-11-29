@@ -1,19 +1,36 @@
+// import React from "react";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   createBrowserRouter,
+//   createRoutesFromElements,
+// } from "react-router-dom";
+// import Layout from "./Layout";
+// import HomeComponent from "./component/Home_component";
+// // Import other page components
 
-
-import { Home_component, Header_component, LoginComponent } from './component/index';
-
-
-function App() {
-
-  return (
-   <div className="w-screen h-screen overflow-x-hidden bg-[#F4F4F4]"> 
-  
-    {/* <Header_component /> */}
-    <Home_component/>
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path="/" element={<Layout />}>
+//       <Route path="/home" element={<HomeComponent />} > 
+//         <Route path='/ward' element = {} /> 
+//       </Route>
     
-    
-   </div>
-  )
-}
+//     </Route>
+//   )
+// );
 
-export default App
+// function App() {
+//   return (
+//     <Router>
+//       <Layout>
+//         <Routes>
+//           <Route path="/home" element={<HomeComponent />}></Route>
+//         </Routes>
+//       </Layout>
+//     </Router>
+//   );
+// }
+
+// export default App;
